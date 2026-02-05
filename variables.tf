@@ -14,3 +14,9 @@ variable "app_image" {
     description = "ECR image URI with tag"
     type        = string
 }
+
+variable "allowed_cidrs" {
+    description = "CIDR blocks allowed to access ALB (e.g. your global IP /32)"
+    type        = list(string)
+    default     = []
+}

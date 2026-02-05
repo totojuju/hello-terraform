@@ -33,7 +33,7 @@ resource "aws_security_group" "alb" {
         from_port = 80
         to_port = 80
         protocol = "tcp"
-        cidr_blocks = ["119.171.161.197/32"]
+        cidr_blocks = var.allowed_cidrs
     }
 
     egress {
